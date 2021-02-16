@@ -14,8 +14,10 @@ fur = np.fft.fft(buffer)
 imagine = [x.imag for x in fur]
 real = [x.real for x in fur]
 
-print(imagine)
-print(real)
+#print(imagine)
+#print(real)
+col=10
+print([el for el in fur[:col]])
 
 mfcc =[x[0] for x in librosa.feature.mfcc(buffer,n_mfcc=20,win_length=n,hop_length=n*2)]
 
